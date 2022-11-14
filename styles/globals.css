@@ -15,12 +15,33 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+:root {
+  --font-size-base: 1rem;
+  --font-size-biggish: 1.75rem;
+  --font-size-big: 2.25rem;
 }
+
+/* elements */
+
+h3 {
+  font-size: var(--font-size-biggish);
+}
+h2 {
+  font-size: var(--font-size-big);
+}
+
+/* utilities */
+
+.font-size\:base {
+  font-size: var(--font-size-base) !important;
+}
+
+.font-size\:biggish {
+  font-size: var(--font-size-biggish) !important;
+}
+
+.font-size\:big {
+  font-size: var(--font-size-big) !important;
+}
+
+
