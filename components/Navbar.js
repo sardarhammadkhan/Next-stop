@@ -14,13 +14,13 @@ function Navbar() {
     { key: 4, name: "Portfolio" },
     { key: 5, name: "CaseStudy" },
     { key: 6, name: "Login" },
-    { key: 7, name: "Get a qoue" },
   ]);
   const [clieckedID, setclieckedID] = useState("1");
   const [openSideBar, setopenSideBar] = useState(false);
+  
 
   useEffect(() => {
-    console.log("openSideBar", openSideBar);
+    console.log("widthof screen", window.innerWidth);
   }, []);
 
   const getID = (id) => {
@@ -42,6 +42,7 @@ function Navbar() {
           <div className={styles.rightUpper}>
             <div className={`${styles.navlist} open-menu`}>
               {list.map((li) => (
+                <>
                 <li
                   key={li.key}
                   className={clieckedID == li.key ? styles.active : ""}
@@ -52,16 +53,16 @@ function Navbar() {
                     className={styles.links}
                     style={{ textDecoration: "none" }}
                   >
-                    {li.name == "Get a qoue" ? (
-                      <button className={styles.navBtn}>{li.name}</button>
-                    ) : li.name == "" ? (
+                   { li.name == "" ? (
                       <span style={{ color: "#FF7A01" }}> Home</span>
                     ) : (
                       li.name
                     )}
                   </Link>
                 </li>
+                 </>
               ))}
+                
             </div>
             <div className={styles.hamburger} onClick={(e) => openBar(e)}>
               {openSideBar ? (
@@ -71,7 +72,11 @@ function Navbar() {
               )}
             </div>
           </div>
+          <div className={styles.btnOfNav}>
+          <button className={styles.navBtn}>Get a qoue</button>
+          </div>
         </div>
+        
       </div>
       <div
         className={
@@ -81,6 +86,7 @@ function Navbar() {
         }
       >
         {list.map((li) => (
+          <>
           <li
             key={li.key}
             className={clieckedID == li.key ? styles.active : ""}
@@ -90,16 +96,18 @@ function Navbar() {
               href={`/${li.name}`}
               style={{ textDecoration: "none", color: "white" }}
             >
-              {li.name == "Get a qoue" ? (
-                <button className={styles.navBtn}>{li.name}</button>
-              ) : li.name == "" ? (
+               { li.name == "" ? (
                 "Home"
               ) : (
                 li.name
               )}
             </Link>
           </li>
+        
+          
+        </>
         ))}
+
       </div>
     </>
   );

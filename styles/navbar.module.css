@@ -7,6 +7,7 @@
    border-bottom: 1px solid black;
   
 }
+
 .container{
     width: 80%;
     height: 80px;
@@ -14,11 +15,12 @@
     margin-right: auto; 
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 
 .logo{
-    width: 50%;
+    width: 30%;
    
  
 }
@@ -40,11 +42,9 @@
    
 }
 .navBtn{
-    width: 100%;
+  
     height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
     background: #FFFBF8;
     color: #FF7A01;
     border: 1px solid #FF7A01;
@@ -69,8 +69,9 @@
     list-style: none;
     align-items: center;
     overflow-x: hidden;
-    width: 100%;
-    height: calc(100% - 80px);
+    width: 30%;
+    height: 80vh;
+
     position: fixed;
     right: 0;
     top: 80px;   
@@ -93,8 +94,11 @@
 }
 .sidebar Link{
     text-decoration:'none'
+
+  
 }
-@media only screen and (max-width:768px) {
+
+    @media only screen and (max-width:768px) {
   
     .navlist {
         display:none;
@@ -109,3 +113,56 @@
         justify-content: end;
     }
 }
+@media only screen and (max-width:768px) {
+    
+ 
+  .rightUpper{
+    width: 33.3%;
+    
+  }
+  .logo{
+    width: 33.3%;
+    
+  }
+  .navlist{
+    display: none;
+  }
+  .btnOfNav{
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+  }
+  .container :nth-child(1) { 
+
+ order: 1;
+  }
+  .container :nth-child(2) { 
+    
+ order: 3;
+  }
+  .container :nth-child(3) { 
+    
+ order: 2;
+  }
+}
+@media only screen and (max-width:768px) {
+    
+.container{
+    width: 100%;
+   
+    display: flex;
+    justify-content: space-evenly;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.rightUpper{
+    display: flex;
+    justify-content: center;
+}
+.btnBetween{
+    display: flex;
+    justify-content: end;
+}
+  }
