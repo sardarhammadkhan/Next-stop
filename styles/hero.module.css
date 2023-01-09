@@ -3,7 +3,7 @@
     height: 1244px;
     background: linear-gradient(180deg, #04B2AE 0%, #038582 100%);
     
-
+  position: relative;
 }
 .heroContainer{
    width: 80%;
@@ -15,9 +15,9 @@
  
 }
 .heroimg{
-    width: 80%;
-   height: 100%;
- 
+     width: 80%;
+     height: 100%;
+
     background-image: url(../public/Images/herobackground.png);
     background-repeat: no-repeat;
     background-position: right 25px;
@@ -26,7 +26,7 @@
 }
 
 .heroContainer .heroGraphy{
-padding-top: 40px;
+  padding-top: 40px;
  width: 100%;
  min-height: 76px;   
  
@@ -55,7 +55,41 @@ color: #FFFFFF;
 }
 .heroBottom{
     position: absolute;
+    bottom: -61px;
+    width: 100%;
+    min-height: 300px;
+  
 }
+.bottomeye{
+   position: relative;
+   bottom: -38px;
+   width: 100%;
+  
+   min-height: 300px;
+   
+}
+.paara{
+    font-style: Dosis;
+    font-weight: 500;
+    font-size: 30px;
+    color: white    ;
+}
+.techEye{
+    font-weight: 700;
+    font-size: 40px;
+    color: rgba(255, 218, 7, 1);
+line-height: 50px;
+}
+.bottomContainer{
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+min-height: 300px;
+}
+
 @media only screen and (max-width:1366px) {
     .heroContainer{
     

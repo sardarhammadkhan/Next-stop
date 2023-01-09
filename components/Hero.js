@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/hero.module.css";
 import Image from "next/image";
 import HeroBottom from "../public/Images/heroBottom.png";
+import Eye from "../public/Images/eye.png";
 function Hero() {
   return (
     <>
@@ -25,9 +26,24 @@ function Hero() {
             </div>
           </div>
         </div>
-        {/* <div className={styles.heroBottom}>
-          <Image src={HeroBottom} />
-        </div> */}
+      
+        <div className={styles.heroBottom}>
+           <div>
+          <Image src={HeroBottom}  layout="fill" />
+          <div className={styles.bottomeye}>
+          <div className={styles.bottomContainer}>
+            
+          <Image src={Eye}/>
+          <div className={styles.paara}>
+          <p>Let us help you see the world with</p>
+           <p className={styles.techEye}>Tech Eyes</p>
+          </div>
+          </div>
+          </div>
+          </div>
+        </div>
+      
+       
       </div>
     </>
   );
